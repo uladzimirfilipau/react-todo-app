@@ -1,0 +1,13 @@
+.header {
+  border: 1px solid red;
+}
+
+.header__title {
+  border: 1px solid red;
+  font-weight: 300;
+  color: #1adaca;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin: 0;
+}
