@@ -1,22 +1,31 @@
 .footer {
-  border: 1px solid red;
-  padding: 30px 0 0;
+  padding: 30px 0;
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 30px 0 15px;
+  }
 }
 
 .footer__copyright {
   font-weight: 300;
+  font-size: 16px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.25);
   margin: 0;
 }
 
 .footer__link {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.3);
+  font-weight: 300;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.25);
   margin: 0 0 0 5px;
 }
 
 .footer__link:hover {
-  color: rgb(18, 143, 192);
+  color: #128fc0;
   transition: background-color 0.2s linear;
 }
