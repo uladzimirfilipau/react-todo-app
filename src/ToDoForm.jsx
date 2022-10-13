@@ -15,7 +15,7 @@ function ToDoForm({ inputValue, handleChange, handleSubmit }) {
         maxLength="20"
         required
       />
-      <button className="form__button" type="submit" aria-label="Add todo">
+      <button className="form__button" type="button" aria-label="Add todo">
         Add
       </button>
     </form>
