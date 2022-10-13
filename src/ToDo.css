@@ -1,0 +1,33 @@
+.item {
+  border: 1px solid #8a8a8a;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.item__title {
+  font-size: 16px;
+  color: #ffff52;
+  margin: 0 10px;
+  align-self: center;
+}
+
+.item__delete {
+  min-width: 80px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid #8a8a8a;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #b30f0f;
+
+  cursor: pointer;
+}
+
+.item__delete:hover {
+  cursor: pointer;
+  background-color: rgba(138, 138, 138, 0.25);
+}
