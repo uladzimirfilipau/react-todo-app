@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Main.css';
 import ToDoForm from './ToDoForm';
+import ToDoList from './ToDoList';
 
 function Main() {
   const [inputValue, setInputValue] = useState('');
@@ -12,10 +13,20 @@ function Main() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (inputValue !== '') {
-      setList([inputValue, ...list]);
+    if (inputValue) {
+      const newItem = {
+        id: Date.now(),
+        value: inputValue,
+        complete: false,
+      };
+      setList([newItem, ...list]);
       setInputValue('');
     }
+  };
+
+  const handleDelete = (id) => {
+    const newList = list.filter((i) => i.id !== id);
+    setList(newList);
   };
 
   return (
@@ -25,6 +36,7 @@ function Main() {
         handleChange={handleChange}
         handleSubmit={handleSubmit}
       />
+      <ToDoList list={list} handleDelete={handleDelete} />
     </main>
   );
 }
