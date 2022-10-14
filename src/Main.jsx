@@ -2,10 +2,11 @@ import { useState } from 'react';
 import './Main.css';
 import ToDoForm from './ToDoForm';
 import ToDoList from './ToDoList';
+import { useLocalStorage } from '../src/hook/useLocalStorage';
 
 function Main() {
   const [inputValue, setInputValue] = useState('');
-  const [list, setList] = useState([]);
+  const [list, setList] = useLocalStorage('todoList', []);
 
   const handleChange = (e) => {
     setInputValue(e.target.value);
