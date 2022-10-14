@@ -1,21 +1,34 @@
 import React from 'react';
 import './ToDo.css';
 
-const ToDo = ({ item, handleDelete }) => {
-  const handleClick = () => {
+const ToDo = ({ item, handleDone, handleDelete }) => {
+  const itemComlete = item.complete;
+  const titleClassName = itemComlete
+    ? 'item__title item__title_complete'
+    : 'item__title';
+  const buttonClassName = itemComlete
+    ? 'item__button item__button_complete'
+    : 'item__button';
+
+  const buttonText = itemComlete ? 'Delete' : 'Done';
+
+  const handleDoneClick = () => {
+    handleDone(item.id);
+  };
+
+  const handleDeleteClick = () => {
     handleDelete(item.id);
   };
 
   return (
     <li className="item">
-      <p className="item__title">{item.value}</p>
+      <p className={titleClassName}>{item.value}</p>
       <button
-        className="item__delete"
+        className={buttonClassName}
         type="button"
-        onClick={handleClick}
-        aria-label="Delete todo"
+        onClick={itemComlete ? handleDeleteClick : handleDoneClick}
       >
-        Delete
+        {buttonText}
       </button>
     </li>
   );

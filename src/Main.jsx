@@ -24,6 +24,13 @@ function Main() {
     }
   };
 
+  const handleDone = (id) => {
+    const newList = list.map((i) =>
+      i.id === id ? { ...i, complete: !i.complete } : { ...i }
+    );
+    setList(newList);
+  };
+
   const handleDelete = (id) => {
     const newList = list.filter((i) => i.id !== id);
     setList(newList);
@@ -36,7 +43,11 @@ function Main() {
         handleChange={handleChange}
         handleSubmit={handleSubmit}
       />
-      <ToDoList list={list} handleDelete={handleDelete} />
+      <ToDoList
+        list={list}
+        handleDone={handleDone}
+        handleDelete={handleDelete}
+      />
     </main>
   );
 }
