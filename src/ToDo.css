@@ -12,7 +12,12 @@
   align-self: center;
 }
 
-.item__delete {
+.item__title_complete {
+  text-decoration: line-through;
+  color: #1adaca;
+}
+
+.item__button {
   min-width: 80px;
   padding: 0;
   background-color: transparent;
@@ -22,12 +27,16 @@
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   text-transform: uppercase;
-  color: #b30f0f;
+  color: #ffff52;
 
   cursor: pointer;
 }
 
-.item__delete:hover {
+.item__button:hover {
   cursor: pointer;
   background-color: rgba(138, 138, 138, 0.25);
+}
+
+.item__button_complete {
+  color: #1adaca;
 }
