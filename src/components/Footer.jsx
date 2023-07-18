@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="footer">
       <p className="footer__copyright">
-        &copy; {year}
+        &copy;&nbsp;{year}
         <a
           className="footer__link"
           href="https://github.com/uladzimirfilipau"

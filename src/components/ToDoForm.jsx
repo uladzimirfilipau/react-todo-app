@@ -12,7 +12,6 @@ function ToDoForm({ inputValue, handleChange, handleSubmit }) {
         onChange={handleChange}
         placeholder="Enter todo..."
         minLength="1"
-        maxLength="20"
         required
       />
       <button className="form__button" type="submit" aria-label="Add todo">

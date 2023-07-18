@@ -1,23 +1,26 @@
-.item {
+.form {
   border: 1px solid #8a8a8a;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   height: 40px;
 }
 
-.item__title {
+.form__input {
+  width: 100%;
+  background-color: transparent;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
-  color: #ffff52;
-  margin: 0 10px;
-  align-self: center;
+  color: #f0f0f0;
+  padding: 0 10px;
+  border: none;
 }
 
-.item__title_complete {
-  text-decoration: line-through;
-  color: #1adaca;
+.form__input:focus {
+  outline: none;
+  background-color: rgba(138, 138, 138, 0.25);
 }
 
-.item__button {
+.form__button {
   min-width: 80px;
   padding: 0;
   background-color: transparent;
@@ -26,17 +29,11 @@
 
   font-family: "Roboto", sans-serif;
   font-size: 18px;
+  color: #f0f0f0;
   text-transform: uppercase;
-  color: #ffff52;
-
-  cursor: pointer;
 }
 
-.item__button:hover {
+.form__button:hover {
   cursor: pointer;
   background-color: rgba(138, 138, 138, 0.25);
-}
-
-.item__button_complete {
-  color: #1adaca;
 }

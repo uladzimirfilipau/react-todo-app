@@ -6,6 +6,7 @@ const ToDo = ({ item, handleDone, handleDelete }) => {
   const titleClassName = itemComlete
     ? 'item__title item__title_complete'
     : 'item__title';
+
   const buttonClassName = itemComlete
     ? 'item__button item__button_complete'
     : 'item__button';
@@ -20,14 +21,12 @@ const ToDo = ({ item, handleDone, handleDelete }) => {
     handleDelete(item.id);
   };
 
+  const handleClick = itemComlete ? handleDeleteClick : handleDoneClick;
+
   return (
-    <li className="item">
+    <li className="item" draggable={true} data-tooltip={item.value}>
       <p className={titleClassName}>{item.value}</p>
-      <button
-        className={buttonClassName}
-        type="button"
-        onClick={itemComlete ? handleDeleteClick : handleDoneClick}
-      >
+      <button className={buttonClassName} type="button" onClick={handleClick}>
         {buttonText}
       </button>
     </li>
